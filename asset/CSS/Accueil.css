@@ -1,0 +1,201 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+body {
+  background-color: #686d76;
+}
+header {
+  height: 7em;
+  width: 100%;
+  background-color: #888c94;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+header div {
+  width: 10em;
+}
+#btn_header {
+  display: flex;
+  gap: 1em;
+}
+.fa,
+p {
+  display: none;
+}
+.btn_log {
+  color: #fff;
+  border: solid 2px #fff;
+  border-radius: 5px;
+  background-color: #888c94;
+  padding: 5%;
+  width: 5em;
+}
+.btn_log:hover {
+  background-color: #fff;
+  color: #55d2ed;
+  cursor: pointer;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3em;
+  margin-top: 5%;
+}
+main img {
+  height: 25em;
+  width: 50em;
+}
+/* Log icon  */
+
+.icon {
+  display: none;
+  height: 3em;
+  width: 4em;
+  font-size: 1em; /* change font size should change size of icon */
+}
+.icon:hover {
+  cursor: pointer;
+}
+.icon::before {
+  content: " ";
+  display: block;
+  height: 1em;
+  width: 1em;
+  background: #55d2ed;
+  position: relative;
+  left: 1.5em;
+  top: 0.8em;
+  border-radius: 2em;
+}
+.icon::after {
+  content: " ";
+  display: block;
+  height: 1em;
+  width: 2em;
+  background: #55d2ed;
+  position: relative;
+  left: 1em;
+  top: 1em;
+  border-radius: 1em 1em 0 0;
+}
+
+/* Animation bouton play */
+.button {
+  --b: 3px; /* border thickness */
+  --s: 0.3em; /* size of the corner */
+  --color: #fff;
+  padding: calc(0.5em + var(--s)) calc(0.9em + var(--s));
+  color: var(--color);
+  --_p: var(--s);
+  background: conic-gradient(
+      from 90deg at var(--b) var(--b),
+      #0000 90deg,
+      var(--color) 0
+    )
+    var(--_p) var(--_p) / calc(100% - var(--b) - 2 * var(--_p))
+    calc(100% - var(--b) - 2 * var(--_p));
+  transition: 0.3s linear, color 0s, background-color 0s;
+  font-size: 30px;
+  border: 0;
+}
+.button:hover,
+.button:focus-visible {
+  --_p: 0px;
+  cursor: pointer;
+}
+
+/* FIN */
+
+/* debut pop up */
+.popup {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  background-color: #888c94;
+  padding: 30px;
+  border-radius: 5px;
+  text-align: center;
+  position: relative;
+  min-width: 300px;
+  max-width: 90%;
+}
+h2 {
+  font-family: sans-serif;
+  color: #fff;
+}
+.connexion {
+  margin-top: 20px;
+  background-color: #55d2ed;
+  border: solid 1px #f2f4f6;
+  border-radius: 5px;
+  padding: 20px;
+  width: 18em;
+  color: #fff;
+  font-weight: 600;
+  font-family: sans-serif;
+}
+.connexion:hover {
+  cursor: pointer;
+  background-color: #686d76;
+}
+.close {
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  color: #fff;
+}
+#redirect {
+  color: #fff;
+}
+/* Fin */
+
+@media screen and (max-width: 500px) and (min-width: 300px) {
+  header img {
+    width: 60%;
+    position: absolute;
+  }
+  #btn_header {
+    display: none;
+  }
+  main img {
+    width: 100%;
+    height: 60%;
+  }
+  .fa {
+    font-size: x-large;
+    color: #55d2ed;
+    display: block;
+  }
+  p {
+    font-size: 0.9em;
+    display: block;
+  }
+  header div {
+    text-align: center;
+    width: 6em;
+    margin-right: 80%;
+  }
+  .icon {
+    display: block;
+  }
+}

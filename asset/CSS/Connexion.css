@@ -1,0 +1,125 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+body {
+  background-color: #686d76;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2em;
+  border: solid #f2f4f6 1px;
+  border-radius: 5px;
+  width: 45%;
+  height: 80%;
+  margin-top: 5%;
+  padding: 1% 0% 0% 0%;
+}
+.logo_connexion {
+  text-align: center;
+}
+#img_logo {
+  width: 80%;
+  border-radius: 5px;
+}
+.connexion_form {
+  color: #f2f4f6;
+  display: none;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
+  height: 20em;
+  width: 90%;
+}
+form input {
+  height: 4em;
+  width: 65%;
+  border-radius: 5px;
+  border: solid 1px #f2f4f6;
+  background-color: #888c94;
+  color: #f2f4f6;
+  font-size: larger;
+}
+
+.btn_connexion {
+  margin-top: 8%;
+  background-color: #55d2ed;
+  /* color: #f2f4f6; */
+}
+.btn_connexion:hover {
+  border: solid 2px #f2f4f6;
+  cursor: pointer;
+  font-weight: bold;
+}
+.formulaire::placeholder {
+  color: #f2f4f6;
+  font-size: large;
+  padding-left: 5%;
+}
+.lien_inscription {
+  text-align: center;
+  background-color: #4f5257;
+  width: 100%;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+a {
+  color: #f2f4f6;
+}
+a:hover {
+  font-weight: bold;
+}
+.lien_inscription {
+  padding: 3% 0%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+.modal_form {
+  height: auto;
+}
+@media screen and (max-width: 500px) and (min-width: 300px) {
+  body {
+    height: 700px;
+  }
+  main {
+    justify-content: space-between;
+    border: none;
+    width: 100%;
+    height: 100%;
+    margin-top: 0%;
+  }
+  .logo_connexion {
+    margin-top: 3%;
+  }
+  form {
+    border: solid 2px #f2f4f6;
+    border-radius: 5px;
+    height: 60%;
+    width: 95%;
+    padding: 1%;
+  }
+  form input {
+    width: 90%;
+  }
+  .connexion_form {
+    display: block;
+    padding: 3% 0%;
+    font-family: sans-serif;
+    font-weight: 400;
+  }
+  .modal_form {
+    border: none;
+  }
+}

@@ -1,0 +1,176 @@
+body {
+  margin: 0;
+  padding: 0;
+  color: #f2f4f6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+  background-color: #686d76;
+}
+.board {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#gameboard {
+  width: 600px;
+  height: 600px;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #686d76;
+}
+
+.square {
+  width: 200px;
+  height: 200px;
+  border: solid 2px #f2f4f6;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.square:nth-child(3n) {
+  border-right: none;
+}
+.square:nth-child(6) ~ .square {
+  border-bottom: none;
+}
+.square:nth-child(-n + 3) {
+  border-top: none;
+}
+.square:nth-child(3n + 1) {
+  border-left: none;
+}
+.circle {
+  height: 160px;
+  width: 160px;
+  border-radius: 50%;
+  border: 20px solid #55d2ed;
+  box-sizing: border-box;
+  animation: appear 0.2s ease-out;
+}
+.cross {
+  height: 180px;
+  width: 180px;
+  position: relative;
+  transform: rotate(45deg);
+}
+.cross::before,
+.cross:after {
+  content: "";
+  position: absolute;
+  background-color: #e73c3c;
+  animation: appear 0.2s ease-out;
+}
+.cross::before {
+  left: 50%;
+  width: 20px;
+  height: 100%;
+  margin-left: -6%;
+  border-radius: 5px;
+}
+.cross::after {
+  top: 50%;
+  width: 100%;
+  height: 20px;
+  margin-top: -6%;
+  border-radius: 5px;
+}
+@keyframes appear {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+}
+.icon {
+  width: 8%;
+  height: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: x-large;
+}
+.icon a i {
+  color: #55d2ed;
+}
+.icon a img {
+  height: 30px;
+}
+.score {
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  font-size: larger;
+
+  width: 50%;
+}
+
+@media screen and (max-width: 500px) and (min-width: 300px) {
+  body {
+    flex-direction: column-reverse;
+    justify-content: flex-end;
+    gap: 100px;
+  }
+  #gameboard {
+    width: 300px;
+    height: 300px;
+  }
+  .square {
+    width: 33.33%;
+    height: 33.33%;
+    border: solid 2px #f2f4f6;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #info {
+    font-size: large;
+  }
+  .board {
+    gap: 50px;
+  }
+  .circle {
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    border: 12px solid #55d2ed;
+    box-sizing: border-box;
+  }
+  .cross {
+    height: 90px;
+    width: 90px;
+    position: relative;
+    transform: rotate(45deg);
+  }
+  .cross::before {
+    left: 50%;
+    width: 15px;
+    height: 100%;
+    margin-left: -8%;
+    border-radius: 5px;
+  }
+  .cross::after {
+    top: 50%;
+    width: 100%;
+    height: 15px;
+    margin-top: -8%;
+    border-radius: 5px;
+  }
+  .score {
+    font-size: small;
+  }
+}

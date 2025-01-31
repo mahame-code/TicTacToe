@@ -1,0 +1,25 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+  background-color: #888c94;
+  color: #f2f4f6;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 0% 8% 8% 8%;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+img {
+  padding: 20px;
+  height: 80px;
+}

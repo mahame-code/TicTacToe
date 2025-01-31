@@ -1,0 +1,104 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  color: #f2f4f6;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+}
+body {
+  background-color: #686d76;
+  display: flex;
+  justify-content: center;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: solid 2px;
+  margin-top: 3%;
+  width: 45%;
+  height: 80%;
+  padding: 5% 0%;
+}
+.div_main {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+}
+.p_main {
+  width: 23em;
+  text-align: center;
+}
+h1 {
+  text-align: center;
+  font-size: 2.5em;
+}
+h1 + p {
+  color: #a3a3a3;
+  text-align: center;
+  width: 50%;
+  padding-top: 2%;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  padding: 2em;
+  width: 28em;
+}
+
+.btn_inscription {
+  margin-top: 8%;
+  padding-left: 0%;
+  background-color: #55d2ed;
+}
+
+.btn_inscription:hover {
+  border: solid 2px #f2f4f6;
+  cursor: pointer;
+  font-weight: bold;
+}
+form input {
+  height: 4em;
+  width: 100%;
+  border-radius: 5px;
+  border: solid 1px #f2f4f6;
+  background-color: #888c94;
+  color: #f2f4f6;
+  font-size: large;
+  padding-left: 5%;
+}
+.formulaire::placeholder {
+  color: #f2f4f6; /*
+  font-size: large;
+  padding-left: 5%; */
+}
+a p:hover {
+  font-weight: bold;
+}
+.deja_inscrit {
+  width: 10em;
+}
+
+@media screen and (max-width: 500px) and (min-width: 300px) {
+  main {
+    border: none;
+    width: 100%;
+  }
+  h1 {
+    width: 80%;
+  }
+  .p_main {
+    width: 80%;
+  }
+  form {
+    align-items: center;
+    width: 100%;
+  }
+  form input {
+    width: 95%;
+  }
+}

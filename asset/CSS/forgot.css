@@ -1,0 +1,54 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+  color: #f2f4f6;
+}
+h2 {
+  color: #f2f4f6;
+}
+body {
+  background-color: #686d76;
+  display: flex;
+  justify-content: center;
+}
+.formulaire {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  text-align: center;
+}
+input {
+  height: 3em;
+  width: 20em;
+}
+#co {
+  color: black;
+}
+button {
+  height: 3em;
+  background-color: #55d2ed;
+  border: solid 1px white;
+  color: white;
+}
+button:hover {
+  cursor: pointer;
+}
+.valider {
+  background-color: #55d2ed;
+  border: solid 1px #f2f4f6;
+}
+.valider:hover {
+  cursor: pointer;
+}
+
+#form_forgot {
+  text-align: center;
+  margin-top: 30px;
+}
+.link {
+  padding-top: 1em;
+}
